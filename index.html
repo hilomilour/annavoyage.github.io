@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Voyage - ID</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Navbar--> 
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="logo.png" alt="Airline Logo" class="logo-img">
+            </div>
+            <div class="find-bar">
+                <input type="text" placeholder="Search...">
+                <button class="find-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+            </div>
+            <button class="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="rencana.html">Rencana Perjalanan</a></li>
+                    <li><a href="info.html">Informasi</a></li>
+                    <li><a href="paket.html">Paket & Penawaran</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="lang-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+                        <span>EN</span>
+                    </button>
+                    <a href="#" class="login-btn">Log in</a>
+                    <button class="signup-btn">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--NAAVVVVVVVBARRRRRRRRRR--> 
+
+    <!--Header--> 
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="banner1.png" alt="Image 1" class="carousel-image">
+            <img src="banner2.jpg" alt="Image 2" class="carousel-image">
+            <img src="banner3.jpg" alt="Image 3" class="carousel-image">
+            <img src="banner4.jpg" alt="Image 4" class="carousel-image">
+        </div>
+        <div class="carousel-indicators">
+            <button class="indicator" data-index="0"></button>
+            <button class="indicator" data-index="1"></button>
+            <button class="indicator" data-index="2"></button>
+            <button class="indicator" data-index="3"></button>
+        </div>
+    </div>
+    <!--Header--> 
+    
+    <!--PESENNN TIKETTTT-->
+    <div class="container mt-5 tabs-container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="cek-tiket">
+                <i class="fas fa-ticket-alt"></i> Cari Penerbangan
+            </button>
+            <button class="tab-button" data-tab="pesanan-saya">
+                <i class="fas fa-clipboard-list"></i> Pesanan Saya
+            </button>
+            <button class="tab-button" data-tab="check-in">
+                <i class="fas fa-plane-departure"></i> Check In
+            </button>
+            <button class="tab-button" data-tab="status-penerbangan">
+                <i class="fas fa-route"></i> Status Penerbangan
+            </button>
+            <button class="tab-button" data-tab="jadwal-penerbangan">
+                <i class="fas fa-calendar-alt"></i> Jadwal Penerbangan
+            </button>
+        </div>
+
+        <div class="tab-content active" id="cek-tiket">
+            <div class="trip-type">
+                <label>
+                    <input type="radio" name="trip-type" value="sekali-jalan" checked> Sekali Jalan
+                </label>
+                <label>
+                    <input type="radio" name="trip-type" value="pulang-pergi"> Pulang Pergi
+                </label>
+            </div>
+            <div id="sekali-jalan-content" class="flight-search-wrapper">
+                <div class="container mt-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="flight-search">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-md-5 position-relative">
+                                        <div class="row g-0">
+                                            <div class="col-6 pe-md-1">
+                                                <select class="flight-search-select" aria-label="From">
+                                                    <option selected disabled>Dari</option>
+                                                    <option value="1">Jakarta [CGK]</option>
+                                                    <option value="2">Denpasar [DPS]</option>
+                                                    <option value="3">Surabaya [SUB]</option>
+                                                    <option value="4">Medan [KNO]</option>
+                                                    <option value="5">Makassar [UPG]</option>
+                                                    <option value="6">Yogyakarta [JOG]</option>
+                                                    <option value="7">Balikpapan [BPN]</option>
+                                                    <option value="8">Manado [MDC]</option>
+                                                    <option value="9">Pekanbaru [PKU]</option>
+                                                    <option value="10">Padang [PDG]</option>
+                                                    <option value="11">Singapore [SIN]</option>
+                                                    <option value="12">Tokyo [NRT]</option>
+                                                    <option value="13">Seoul [ICN]</option>
+                                                    <option value="14">Dubai [DXB]</option>
+                                                    <option value="15">London [LHR]</option>
+                                                    <option value="16">Los Angeles [LAX]</option>
+                                                    <option value="17">Bangkok [BKK]</option>
+                                                    <option value="18">Hong Kong [HKG]</option>
+                                                    <option value="19">Paris [CDG]</option>
+                                                    <option value="20">Sydney [SYD]]</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-6 ps-md-1">
+                                                <select class="flight-search-select" aria-label="To">
+                                                    <option selected disabled>Ke</option>
+                                                    <option value="1">Jakarta [CGK]</option>
+                                                    <option value="2">Denpasar [DPS]</option>
+                                                    <option value="3">Surabaya [SUB]</option>
+                                                    <option value="4">Medan [KNO]</option>
+                                                    <option value="5">Makassar [UPG]</option>
+                                                    <option value="6">Yogyakarta [JOG]</option>
+                                                    <option value="7">Balikpapan [BPN]</option>
+                                                    <option value="8">Manado [MDC]</option>
+                                                    <option value="9">Pekanbaru [PKU]</option>
+                                                    <option value="10">Padang [PDG]</option>
+                                                    <option value="11">Singapore [SIN]</option>
+                                                    <option value="12">Tokyo [NRT]</option>
+                                                    <option value="13">Seoul [ICN]</option>
+                                                    <option value="14">Dubai [DXB]</option>
+                                                    <option value="15">London [LHR]</option>
+                                                    <option value="16">Los Angeles [LAX]</option>
+                                                    <option value="17">Bangkok [BKK]</option>
+                                                    <option value="18">Hong Kong [HKG]</option>
+                                                    <option value="19">Paris [CDG]</option>
+                                                    <option value="20">Sydney [SYD]]</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-primary rounded-circle swap-btn">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M8 3L4 7L8 11"></path>
+                                                <path d="M4 7H20"></path>
+                                                <path d="M16 21L20 17L16 13"></path>
+                                                <path d="M20 17H4"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="row g-0">
+                                            <div class="col-md-4 pe-md-1">
+                                                <div class="flight-search-group position-relative">
+                                                    <input type="date" class="flight-search-input" id="departDate">
+                                                    <label for="departDate" class="date-label">Pergi*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto px-2 d-flex align-items-center">
+                                                <span class="date-separator">—</span>
+                                            </div>
+                                            <div class="col-md-4 pe-md-1">
+                                                <div class="flight-search-group position-relative">
+                                                    <input type="date" class="flight-search-input" id="returnDate"disabled>
+                                                    <label for="returnDate" class="date-label">Pulang*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <input type="text" class="flight-search-input" placeholder="KODE PROMO">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Baris kedua -->
+                                <div class="row g-3 align-items-center mt-3">
+                                    <div class="col-md-4">
+                                        <div class="passenger-dropdown">
+                                            <button type="button" class="flight-search-select passenger-trigger" id="passengerDropdown">
+                                                Penumpang
+                                            </button>
+                                            <div class="passenger-menu">
+                                                <div class="passenger-type">
+                                                    <div class="passenger-info">
+                                                        <div>
+                                                            <h3>Dewasa</h3>
+                                                            <p>Diatas 12 tahun.</p>
+                                                        </div>
+                                                        <div class="passenger-counter">
+                                                            <button class="counter-btn minus" data-type="adult">−</button>
+                                                            <span class="count" id="adultCount">0</span>
+                                                            <button class="counter-btn plus" data-type="adult">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="passenger-type">
+                                                    <div class="passenger-info">
+                                                        <div>
+                                                            <h3>Anak</h3>
+                                                            <p>Umur 2 - 11 tahun.</p>
+                                                        </div>
+                                                        <div class="passenger-counter">
+                                                            <button class="counter-btn minus" data-type="child">−</button>
+                                                            <span class="count" id="childCount">0</span>
+                                                            <button class="counter-btn plus" data-type="child">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="passenger-type">
+                                                    <div class="passenger-info">
+                                                        <div>
+                                                            <h3>Bayi</h3>
+                                                            <p>Dibawah 2 tahun.</p>
+                                                        </div>
+                                                        <div class="passenger-counter">
+                                                            <button class="counter-btn minus" data-type="infant">−</button>
+                                                            <span class="count" id="infantCount">0</span>
+                                                            <button class="counter-btn plus" data-type="infant">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select class="flight-search-select" aria-label="Cabin Class">
+                                            <option selected disabled>Kelas Kabin</option>
+                                            <option value="1">Ekonomi</option>
+                                            <option value="2">Bisnis</option>
+                                            <option value="3">First Class</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-light view-status-btn w-100">CARI</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pulang-pergi-content" class="flight-search-wrapper" style="display: none;">
+                <div class="container mt-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="flight-search">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-md-5 position-relative">
+                                        <div class="row g-0">
+                                            <div class="col-6 pe-md-1">
+                                                <select class="flight-search-select" aria-label="From">
+                                                    <option selected disabled>Dari</option>
+                                                    <option value="1">Jakarta [CGK]</option>
+                                                    <option value="2">Denpasar [DPS]</option>
+                                                    <option value="3">Surabaya [SUB]</option>
+                                                    <option value="4">Medan [KNO]</option>
+                                                    <option value="5">Makassar [UPG]</option>
+                                                    <option value="6">Yogyakarta [JOG]</option>
+                                                    <option value="7">Balikpapan [BPN]</option>
+                                                    <option value="8">Manado [MDC]</option>
+                                                    <option value="9">Pekanbaru [PKU]</option>
+                                                    <option value="10">Padang [PDG]</option>
+                                                    <option value="11">Singapore [SIN]</option>
+                                                    <option value="12">Tokyo [NRT]</option>
+                                                    <option value="13">Seoul [ICN]</option>
+                                                    <option value="14">Dubai [DXB]</option>
+                                                    <option value="15">London [LHR]</option>
+                                                    <option value="16">Los Angeles [LAX]</option>
+                                                    <option value="17">Bangkok [BKK]</option>
+                                                    <option value="18">Hong Kong [HKG]</option>
+                                                    <option value="19">Paris [CDG]</option>
+                                                    <option value="20">Sydney [SYD]]</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-6 ps-md-1">
+                                                <select class="flight-search-select" aria-label="To">
+                                                    <option selected disabled>Ke</option>
+                                                    <option value="1">Jakarta [CGK]</option>
+                                                    <option value="2">Denpasar [DPS]</option>
+                                                    <option value="3">Surabaya [SUB]</option>
+                                                    <option value="4">Medan [KNO]</option>
+                                                    <option value="5">Makassar [UPG]</option>
+                                                    <option value="6">Yogyakarta [JOG]</option>
+                                                    <option value="7">Balikpapan [BPN]</option>
+                                                    <option value="8">Manado [MDC]</option>
+                                                    <option value="9">Pekanbaru [PKU]</option>
+                                                    <option value="10">Padang [PDG]</option>
+                                                    <option value="11">Singapore [SIN]</option>
+                                                    <option value="12">Tokyo [NRT]</option>
+                                                    <option value="13">Seoul [ICN]</option>
+                                                    <option value="14">Dubai [DXB]</option>
+                                                    <option value="15">London [LHR]</option>
+                                                    <option value="16">Los Angeles [LAX]</option>
+                                                    <option value="17">Bangkok [BKK]</option>
+                                                    <option value="18">Hong Kong [HKG]</option>
+                                                    <option value="19">Paris [CDG]</option>
+                                                    <option value="20">Sydney [SYD]]</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-primary rounded-circle swap-btn">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M8 3L4 7L8 11"></path>
+                                                <path d="M4 7H20"></path>
+                                                <path d="M16 21L20 17L16 13"></path>
+                                                <path d="M20 17H4"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="row g-0">
+                                            <div class="col-md-4 pe-md-1">
+                                                <div class="flight-search-group position-relative">
+                                                    <input type="date" class="flight-search-input" id="departDate">
+                                                    <label for="departDate" class="date-label">Pergi*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto px-2 d-flex align-items-center">
+                                                <span class="date-separator">—</span>
+                                            </div>
+                                            <div class="col-md-4 pe-md-1">
+                                                <div class="flight-search-group position-relative">
+                                                    <input type="date" class="flight-search-input" id="returnDate">
+                                                    <label for="returnDate" class="date-label">Pulang*</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <input type="text" class="flight-search-input" placeholder="KODE PROMO">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Baris kedua -->
+                                <div class="row g-3 align-items-center mt-3">
+                                    <!-- Add this next to the cabin class dropdown in the existing HTML -->
+                                    <div class="col-md-4">
+                                        <div class="passenger-dropdown">
+                                            <button type="button" class="flight-search-select passenger-trigger" id="passengerDropdown">
+                                                Penumpang
+                                            </button>
+                                            <div class="passenger-menu">
+                                                <div class="passenger-type">
+                                                    <div class="passenger-info">
+                                                        <div>
+                                                            <h3>Dewasa</h3>
+                                                            <p>Diatas 12 tahun.</p>
+                                                        </div>
+                                                        <div class="passenger-counter">
+                                                            <button class="counter-btn minus" data-type="adult">−</button>
+                                                            <span class="count" id="adultCount">0</span>
+                                                            <button class="counter-btn plus" data-type="adult">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="passenger-type">
+                                                    <div class="passenger-info">
+                                                        <div>
+                                                            <h3>Anak</h3>
+                                                            <p>Umur 2-11 tahun.</p>
+                                                        </div>
+                                                        <div class="passenger-counter">
+                                                            <button class="counter-btn minus" data-type="child">−</button>
+                                                            <span class="count" id="childCount">0</span>
+                                                            <button class="counter-btn plus" data-type="child">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="passenger-type">
+                                                    <div class="passenger-info">
+                                                        <div>
+                                                            <h3>Bayi</h3>
+                                                            <p>Dibawah 2 tahun.</p>
+                                                        </div>
+                                                        <div class="passenger-counter">
+                                                            <button class="counter-btn minus" data-type="infant">−</button>
+                                                            <span class="count" id="infantCount">0</span>
+                                                            <button class="counter-btn plus" data-type="infant">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select class="flight-search-select" aria-label="Cabin Class">
+                                            <option selected disabled>Kelas Kabin</option>
+                                            <option value="1">Ekonomi</option>
+                                            <option value="2">Bisnis</option>
+                                            <option value="3">First Class</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn btn-light view-status-btn w-100">CARI</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <!--CEK PESANANN SAYAA-->
+        <div class="tab-content" id="pesanan-saya">
+            <p class="mb-1"><b>Kelola booking Anna Voyage-mu gampang banget! Mau pesan via web, app, atau travel partner terpercaya, semua bisa!</b></p>
+            <p class="mb-3">Kami sangat menjaga privasi Anda. Karena penumpang dengan referensi pemesanan yang sama dapat mengakses data tertentu, kami menyarankan Anda menggunakan kode pemesanan alfanumerik 6 digit beserta nama belakang untuk mengelola pemesanan Anda.</p>
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div class="col-12">
+                        <form class="booking-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="bookingReference" placeholder="Nomor referensi pemesanan">
+                                        <small class="form-text text-muted">Silakan gunakan kode referensi pemesanan alfanumerik 6 digit.</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex">
+                                        <input type="text" class="form-control" id="lastName" placeholder="Nama belakang">
+                                        <button type="button" class="btn btn-outline-secondary ms-2">CEK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--CEK PESANANNNN SAYYYAAAAA-->
+
+        <!--CHECKKK INNNN-->
+        <div class="tab-content" id="check-in">
+            <p class="mb-1">Anda dapat melakukan web check-in mulai dari 48 jam hingga 90 menit sebelum jadwal penerbangan Anda.</p>
+            <p class="mb-3">
+                Untuk kelancaran proses check-in, nama penumpang yang terdaftar di bawah PNR yang sama akan ditampilkan. <br>
+                Untuk check-in penerbangan yang dioperasikan oleh AnnaSky, kunjungi 
+                <a href="https://www.annasky.com.my" target="_blank">www.annasky.com.my</a>.
+            </p>            
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div class="col-12">
+                        <form class="booking-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="bookingReference" placeholder="Nomor referensi pemesanan/Nomor e-tiket">
+                                        <small class="form-text text-muted">Silakan gunakan kode referensi pemesanan alfanumerik 6 digit.</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group d-flex">
+                                        <input type="text" class="form-control" id="lastName" placeholder="Nama belakang">
+                                        <button type="button" class="btn btn-outline-secondary ms-2">CHECK IN</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--STATUSSSS PENERBANGANNN-->
+        <div class="tab-content" id="status-penerbangan">
+            <div class="flight-status">
+                <label>
+                    <input type="radio" name="flight-status" value="kota" checked> Kota
+                </label>
+                <label>
+                    <input type="radio" name="flight-status" value="nomor-penerbangan"> Nomor Penerbangan
+                </label>
+            </div>
+        
+            <!-- Konten Kota -->
+            <div id="kota-content" class="status-city">
+                <p class="mb-1">Semua waktu keberangkatan dan kedatangan ditampilkan sesuai dengan waktu setempat kota tujuan. Kami berupaya menampilkan status dan jadwal seakurat mungkin. Namun, perlu diketahui bahwa jadwal dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya dan mungkin tidak mencakup semua kemungkinan penerbangan atau penerbangan tambahan.</p>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="flight-search">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-md-3">
+                                        <div class="flight-search-group position-relative">
+                                            <input type="date" class="flight-search-input custom-date" id="flightDate">
+                                            <label for="flightDate" class="date-label">Date</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 position-relative">
+                                        <div class="row g-0">
+                                            <div class="col-6 pe-md-1">
+                                                <select class="flight-search-select custom-select" aria-label="From" aria-placeholder="Keberangkatan">
+                                                    <option selected disabled>Dari</option>
+                                                    <option value="1">Jakarta [CGK]</option>
+                                                    <option value="2">Denpasar [DPS]</option>
+                                                    <option value="3">Surabaya [SUB]</option>
+                                                    <option value="4">Medan [KNO]</option>
+                                                    <option value="5">Makassar [UPG]</option>
+                                                    <option value="6">Yogyakarta [JOG]</option>
+                                                    <option value="7">Balikpapan [BPN]</option>
+                                                    <option value="8">Manado [MDC]</option>
+                                                    <option value="9">Pekanbaru [PKU]</option>
+                                                    <option value="10">Padang [PDG]</option>
+                                                    <option value="11">Singapore [SIN]</option>
+                                                    <option value="12">Tokyo [NRT]</option>
+                                                    <option value="13">Seoul [ICN]</option>
+                                                    <option value="14">Dubai [DXB]</option>
+                                                    <option value="15">London [LHR]</option>
+                                                    <option value="16">Los Angeles [LAX]</option>
+                                                    <option value="17">Bangkok [BKK]</option>
+                                                    <option value="18">Hong Kong [HKG]</option>
+                                                    <option value="19">Paris [CDG]</option>
+                                                    <option value="20">Sydney [SYD]]</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-6 ps-md-1">
+                                                <select class="flight-search-select custom-select" aria-label="To" aria-placeholder="Kedatangan">
+                                                    <option selected disabled>Ke</option>
+                                                    <option value="1">Jakarta [CGK]</option>
+                                                    <option value="2">Denpasar [DPS]</option>
+                                                    <option value="3">Surabaya [SUB]</option>
+                                                    <option value="4">Medan [KNO]</option>
+                                                    <option value="5">Makassar [UPG]</option>
+                                                    <option value="6">Yogyakarta [JOG]</option>
+                                                    <option value="7">Balikpapan [BPN]</option>
+                                                    <option value="8">Manado [MDC]</option>
+                                                    <option value="9">Pekanbaru [PKU]</option>
+                                                    <option value="10">Padang [PDG]</option>
+                                                    <option value="11">Singapore [SIN]</option>
+                                                    <option value="12">Tokyo [NRT]</option>
+                                                    <option value="13">Seoul [ICN]</option>
+                                                    <option value="14">Dubai [DXB]</option>
+                                                    <option value="15">London [LHR]</option>
+                                                    <option value="16">Los Angeles [LAX]</option>
+                                                    <option value="17">Bangkok [BKK]</option>
+                                                    <option value="18">Hong Kong [HKG]</option>
+                                                    <option value="19">Paris [CDG]</option>
+                                                    <option value="20">Sydney [SYD]]</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-primary rounded-circle swap-btn">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M8 3L4 7L8 11"></path>
+                                                <path d="M4 7H20"></path>
+                                                <path d="M16 21L20 17L16 13"></path>
+                                                <path d="M20 17H4"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-light view-status-btn">CEK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Konten Nomor Penerbangan -->
+            <div id="nomor-penerbangan-content" class="status-city" style="display: none;">
+                <p class="mb-1">Silakan gunakan format 4 digit untuk nomor penerbangan Anda. Sebagai contoh, untuk AN1, masukkan 0001.</p>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="flight-search">
+                                <div class="row g-3 align-items-center">
+                                    <!-- Input Tanggal -->
+                                    <div class="col-md-3">
+                                        <div class="flight-search-group position-relative">
+                                            <input type="date" class="flight-search-input custom-date" id="flightDate">
+                                            <label for="flightDate" class="date-label">Date</label>
+                                        </div>
+                                    </div>
+                
+                                    <!-- Input Flight Number dan Button -->
+                                    <div class="col-md-9">
+                                        <div class="row g-2 align-items-center">
+                                            <!-- Input Flight Number -->
+                                            <div class="col-md-8">
+                                                <div class="flight-search-group">
+                                                    <input type="text" class="flight-search-input" placeholder="Flight number">
+                                                </div>
+                                            </div>
+                
+                                            <!-- Button View Flight Status -->
+                                            <div class="col-md-4">
+                                                <button type="button" class="btn btn-light view-status-btn w-100">CEK</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <!--STATUSSSS PENERBANGANNN-->
+
+        <!--JADWALLLLLLL-->
+        <div class="tab-content" id="jadwal-penerbangan">
+            <p class="mb-1">Telusuri jadwal lengkap semua penerbangan yang dioperasikan oleh Anna Voyage.</p>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="flight-search">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-md-5 position-relative">
+                                    <div class="row g-0">
+                                        <div class="col-6 pe-md-1">
+                                            <select class="flight-search-select" aria-label="From">
+                                                <option selected disabled>Dari</option>
+                                                    <option value="1">Jakarta [CGK]</option>
+                                                    <option value="2">Denpasar [DPS]</option>
+                                                    <option value="3">Surabaya [SUB]</option>
+                                                    <option value="4">Medan [KNO]</option>
+                                                    <option value="5">Makassar [UPG]</option>
+                                                    <option value="6">Yogyakarta [JOG]</option>
+                                                    <option value="7">Balikpapan [BPN]</option>
+                                                    <option value="8">Manado [MDC]</option>
+                                                    <option value="9">Pekanbaru [PKU]</option>
+                                                    <option value="10">Padang [PDG]</option>
+                                                    <option value="11">Singapore [SIN]</option>
+                                                    <option value="12">Tokyo [NRT]</option>
+                                                    <option value="13">Seoul [ICN]</option>
+                                                    <option value="14">Dubai [DXB]</option>
+                                                    <option value="15">London [LHR]</option>
+                                                    <option value="16">Los Angeles [LAX]</option>
+                                                    <option value="17">Bangkok [BKK]</option>
+                                                    <option value="18">Hong Kong [HKG]</option>
+                                                    <option value="19">Paris [CDG]</option>
+                                                    <option value="20">Sydney [SYD]]</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-6 ps-md-1">
+                                            <select class="flight-search-select" aria-label="To">
+                                                <option selected disabled>Ke</option>
+                                                    <option value="1">Jakarta [CGK]</option>
+                                                    <option value="2">Denpasar [DPS]</option>
+                                                    <option value="3">Surabaya [SUB]</option>
+                                                    <option value="4">Medan [KNO]</option>
+                                                    <option value="5">Makassar [UPG]</option>
+                                                    <option value="6">Yogyakarta [JOG]</option>
+                                                    <option value="7">Balikpapan [BPN]</option>
+                                                    <option value="8">Manado [MDC]</option>
+                                                    <option value="9">Pekanbaru [PKU]</option>
+                                                    <option value="10">Padang [PDG]</option>
+                                                    <option value="11">Singapore [SIN]</option>
+                                                    <option value="12">Tokyo [NRT]</option>
+                                                    <option value="13">Seoul [ICN]</option>
+                                                    <option value="14">Dubai [DXB]</option>
+                                                    <option value="15">London [LHR]</option>
+                                                    <option value="16">Los Angeles [LAX]</option>
+                                                    <option value="17">Bangkok [BKK]</option>
+                                                    <option value="18">Hong Kong [HKG]</option>
+                                                    <option value="19">Paris [CDG]</option>
+                                                    <option value="20">Sydney [SYD]]</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary rounded-circle swap-btn">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M8 3L4 7L8 11"></path>
+                                            <path d="M4 7H20"></path>
+                                            <path d="M16 21L20 17L16 13"></path>
+                                            <path d="M20 17H4"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="row g-0">
+                                        <div class="col-6 pe-md-1">
+                                            <div class="flight-search-group position-relative">
+                                                <input type="date" class="flight-search-input" id="departDate">
+                                                <label for="departDate" class="date-label">Pergi*</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto px-2 d-flex align-items-center">
+                                            <span class="date-separator">—</span>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="flight-search-group position-relative">
+                                                <input type="date" class="flight-search-input" id="returnDate">
+                                                <label for="returnDate" class="date-label">Pulang*</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-light view-status-btn w-100">CARI</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--JADDWALLLL-->
+    </div>
+    <!--PESENNN TIKETTTT-->
+
+    <!--FASILITASS-->
+    <div class="facilities-section">
+        <h2 class="section-title">Temukan Standar Baru dalam Penerbangan</h2>
+        <div class="facilities-container">
+            <div class="facility-card" style="background-image: url('https://www.aviationbusinessnews.com/resources/uploads/2019/12/Inflight-Entertainment.jpg');">
+                <div class="facility-description">
+                    <h3>In-Flight Entertainment</h3>
+                </div>
+            </div>
+            <div class="facility-card" style="background-image: url('https://cdn.rri.co.id/berita/Biak/o/1726871574049-MAKANAN_PESAWAT_FREEPIK/ffwgksxff27jujj.jpeg');">
+                <div class="facility-description">
+                    <h3>Hidangan Lezat</h3>
+                </div>
+            </div>
+            <div class="facility-card" style="background-image: url('https://www.futuretravelexperience.com/wp-content/uploads/2018/10/sia-a350-900-pax.jpg');">
+                <div class="facility-description">
+                    <h3>Kursi Nyaman</h3>
+                </div>
+            </div>
+        </div>
+    </div>       
+    <!--FASILITASS-->
+
+    <!--POPULERRRR-->
+    <div class="bg-destination">
+        <h2>Destinasi Hits yang Harus Ada di Bucket List Anda</h2>
+        <div class="item-container">
+            <div class="item">
+                <img src="https://travelbuddies.co.id/wp-content/uploads/2021/11/01.-BANDA-NEIRA-scaled.jpg" alt="Whiz Kid Wonders" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h2 class="item-title">Banda Neira</h2>
+                        <span class="badge">BNA</span>
+                    </div>
+                    <div class="item-footer">
+                        <div class="bid-info">
+                            <p class="bid-label">Harga Mulai</p>
+                            <p class="bid-amount">IDR 3.500.000</p>
+                        </div>
+                        <button class="bid-button">Pesan</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <img src="https://indonesiajuara.asia/wp-content/uploads/2022/07/Piaynemo1.webp" alt="Raja Ampat" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h2 class="item-title">Raja Ampat</h2>
+                        <span class="badge">RJM</span>
+                    </div>
+                    <div class="item-footer">
+                        <div class="bid-info">
+                            <p class="bid-label">Harga Mulai</p>
+                            <p class="bid-amount">IDR 4.800.000</p>
+                        </div>
+                        <button class="bid-button">Pesan</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <img src="https://discoverd1.gr/sites/default/files/2023-05/heraklion-is-the-fifth-largest-city-in-greece.jpg" alt="Heraklion" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h2 class="item-title">Heraklion</h2>
+                        <span class="badge">HER</span>
+                    </div>
+                    <div class="item-footer">
+                        <div class="bid-info">
+                            <p class="bid-label">Harga Mulai</p>
+                            <p class="bid-amount">IDR 7.200.000</p>
+                        </div>
+                        <button class="bid-button">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <img src="https://assets.promediateknologi.id/crop/0x454:718x983/750x500/webp/photo/2022/03/26/938649865.jpg" alt="Paris" class="item-image">
+                <div class="item-content">
+                    <div class="item-header">
+                        <h2 class="item-title">Paris</h2>
+                        <span class="badge">CDG</span>
+                    </div>
+                    <div class="item-footer">
+                        <div class="bid-info">
+                            <p class="bid-label">Harga Mulai</p>
+                            <p class="bid-amount">IDR 10.500.000</p>
+                        </div>
+                        <button class="bid-button">Pesan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button class="btn-check">Cek yang Lain</button>
+        </div>
+        
+    </div>
+
+    <!--MOBILE APPP-->
+    <section id="background-section">
+        <div id="section-container">
+            <div class="text-area">
+                <h1>Rencanakan Liburan Tanpa Ribet!</h1>
+                <p>
+                Rasakan kemudahan memesan tiket, mengelola rencana perjalanan, dan menemukan penawaran spesial langsung di smartphone Anda. Unduh aplikasi <b>FlySmart by Anna</b> sekarang - kemudahan perjalanan dalam satu sentuhan!
+                </p>
+                <a href="#learn-more" class="cta-button">Unduh Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!--UDAH FOOTERRRRR-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="logo.png" alt="Logo Maskapai" class="footer-logo">
+                <p>Maskapai terbaik yang siap melayani perjalanan Anda ke berbagai destinasi menarik di seluruh dunia.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Tentang Kami</h4>
+                <ul>
+                    <li><a href="#informasi-perusahaan">Informasi Perusahaan</a></li>
+                    <li><a href="#layanan-utama">Layanan Utama</a></li>
+                    <li><a href="#jaringan-penerbangan">Jaringan Penerbangan</a></li>
+                    <li><a href="#armada-pesawat">Armada Pesawat</a></li>
+                    <li><a href="#penghargaan">Penghargaan dan Sertifikasi</a></li>
+                    <li><a href="#tim-manajemen">Tim Manajemen</a></li>
+                    <li><a href="#kemitraan">Hubungan dan Kemitraan</a></li>
+                    <li><a href="#berita">Berita</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontak Kami</h4>
+                <p><strong>Telepon:</strong> +62 123 456 789</p>
+                <p><strong>Email:</strong> contact@annavoyage.com</p>
+                <p><strong>Alamat:</strong> Jl. Jend. Gatot Subroto, Beningrejo, Gaum, Kec. Tasikmadu, Kabupaten Karanganyar, Jawa Tengah 57716</p>
+            </div>
+            <div class="footer-social">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="https://www.svgrepo.com/show/473600/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn.worldvectorlogo.com/logos/twitter-logo-2.svg" alt="Twitter"></a>
+                    <a href="#"><img src="https://www.svgrepo.com/show/510026/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="https://www.svgrepo.com/show/473806/tiktok.svg" alt="Tiktok"></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Berlangganan Newsletter</h4>
+                <p>Dapatkan informasi promo dan penawaran terbaik langsung di email Anda!</p>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Masukkan email Anda" required>
+                    <button type="submit">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Anna Voyage. All Rights Reserved.</p>
+        </div>
+    </footer>    
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Alata&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Chivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Jacques+Francois+Shadow&family=Kavoon&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/*NAVVBARRRRRRRRRRR
+NAVVBARRRRRR*/
+.navbar {
+    background-color: #EAD8C2;
+    padding: 0.3rem 0;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo-img {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.find-bar {
+    display: flex;
+    align-items: center;
+    background-color: white; 
+    border-radius: 20px;
+    padding: 0.3rem;
+    border: 1px solid #ddd; 
+    transition: all 0.3s ease; 
+}
+
+.find-bar:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+}
+
+.find-bar input {
+    border: none;
+    background-color: transparent;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    font-family: Montserrat;
+}
+
+.find-bar input:focus {
+    outline: none;
+}
+
+.find-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.3s ease;
+}
+
+.find-btn:hover {
+    color: #5a4634; 
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5a4634;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-left: 10px;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    font-family: Montserrat;
+    text-decoration: none;
+    color: #5a4634;
+    font-size: 0.875rem;
+    font-weight: 500;
+    position: relative; 
+    transition: color 0.3s ease; 
+}
+
+.nav-links a:hover {
+    color: #c38e53; 
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #54402f; 
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%; 
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.lang-btn, .login-btn, .signup-btn {
+    font-family: Montserrat;
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease; 
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5a4634;
+}
+
+.lang-btn:hover {
+    color: #c38e53; 
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #54402f;
+}
+
+.login-btn:hover {
+    color: #c38e53; 
+}
+
+.signup-btn {
+    background: linear-gradient(45deg, #C49B66, #8B5E3C);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.signup-btn:hover {
+    background: linear-gradient(45deg, #D4AF78, #6B4425);
+    color: #4A3C31;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .find-bar {
+        order: 1;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        order: 3;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .lang-btn, .login-btn, .signup-btn {
+        margin: 0.5rem 0;
+    }
+}
+
+/*DESTINASIII*/
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background-image: url('https://www.megainsurance.co.id/po-content/uploads/wisata_pantai.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: Alegreya;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.destinasi {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Agbalumo;
+    font-size: 1.5rem;
+    color: #6B4425;
+    text-shadow: 2px 2px 4px rgba(107, 68, 37, 0.5), 
+             -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+}
+
+.hero {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.image {
+    width: 100%;
+    height: 90%;
+    object-fit: cover; 
+}
+
+.text {
+    background-image: linear-gradient(45deg, #E63946, #8B0000);
+    border-radius: 30px;
+    position: absolute;
+    top: 71%;
+    left: -5px;
+    height: 50%;
+    width: 108%;
+    transform: skew(19deg, -9deg);
+}
+
+.date {
+    position: absolute;
+    color: #ffffff;
+    font-family: Montserrat;
+    left: 30px;
+    bottom: 8.5%;
+    font-size: 13pt;
+    z-index: 10;
+}
+
+.hero-btn {
+    position: absolute;
+    color: #fff;
+    font-family: Inter;
+    font-size: 12.5px;
+    right: 30px;
+    bottom: 10%;
+    padding: 5px 9px;
+    border: 1px solid #fff;
+    animation: button-anim 2s ease 0s infinite normal forwards;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.center-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Montserrat;
+    color: black;
+    background: linear-gradient(45deg, #FF9E2C, #FF7200);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.center-button:hover {
+    transform: scale(1.05) !important;
+    background: linear-gradient(45deg, #FF7200, #FF9E2C) !important;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+@keyframes button-anim {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.hero-btn:hover {
+    animation: none;
+}
+
+.hero-btn a {
+    color: #fff;
+}
+
+.btn i:before {
+  width: 14px;
+  height: 14px;
+  position: fixed;
+  color: #fff;
+  background: #0077B5;
+  padding: 10px;
+  border-radius: 50%;
+  top:5px;
+  right:5px;
+}
+
+
+/*BANNERRRRR*/
+.promo-banner {
+    background-image: linear-gradient(to right, rgba(6, 32, 69, 0.4), rgba(6, 32, 69, 0.3)), url('https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/222/2024/08/13/IMG-20240812-WA0164-495951878.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 15px;
+    margin: 50px;
+}
+
+.promo-text {
+    max-width: 50%;
+    color: white;
+    text-align: right;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.promo-title {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Montserrat;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.promo-description {
+    font-size: 15px;
+    font-family: Chivo;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.promo-button {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Chivo;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.promo-button:hover {
+    background-color: #E63946;
+}
+
+ 
+/*FOOTERRR SUDAHHH*/
+.footer {
+    background-color: #EAD8C2;
+    color: #4A3C31;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    z-index: 101;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social,
+.footer-newsletter {
+    flex: 1;
+    min-width: 200px;
+    font-family: Chivo;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer h4{
+    margin-bottom: 12px;
+}
+
+.footer-about p {
+    line-height: 1.6;
+
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #4A3C31;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #c38e53; 
+}
+
+.footer-contact p {
+    margin-bottom: 8px;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social .social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social .social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-newsletter p{
+    margin-bottom: 7px;
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.footer-newsletter button {
+    padding: 10px;
+    border: none;
+    background: linear-gradient(45deg, #C49B66, #8B5E3C);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+    background: linear-gradient(45deg, #D4AF78, #6B4425); 
+    color: #4A3C31;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #4A3C31;
+    font-size: 12px;
+    color: #4A3C31;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .footer-container {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-container {
+        justify-content: center;
+    }
+    
+    .hero {
+        width: calc(50% - 15px);
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .promo-banner {
+        margin: 30px 20px;
+    }
+    
+    .promo-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .footer-container > div {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .destinasi h1 {
+        font-size: 1.2rem;
+    }
+    
+    .promo-title {
+        font-size: 24px;
+    }
+    
+    .promo-description {
+        font-size: 14px;
+    }
+}

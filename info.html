@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Voyage - Informasi Penerbangan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="info.css">
+</head>
+<body>
+    <!--Navbar--> 
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="logo.png" alt="Airline Logo" class="logo-img">
+            </div>
+            <div class="find-bar">
+                <input type="text" placeholder="Search...">
+                <button class="find-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+            </div>
+            <button class="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="rencana.html">Rencana Perjalanan</a></li>
+                    <li><a href="info.html">Informasi</a></li>
+                    <li><a href="paket.html">Paket & Penawaran</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="lang-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+                        <span>EN</span>
+                    </button>
+                    <a href="#" class="login-btn">Log in</a>
+                    <button class="signup-btn">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--NAAVVVVVVVBARRRRRRRRRR--> 
+
+    <!--INPOO INPOOOOOO-->
+    <div class="app-container">
+        <div class="main-content">
+            <aside class="sidebar" id="sidebar">
+                <ul class="sidebar-links">
+                    <li>
+                        <a href="#bagasi" class="sidebar-item active" data-section="bagasi">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4z"/></svg>
+                            <span>Panduan Kebijakan Bagasi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#checkin" class="sidebar-item" data-section="checkin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                            <span>Ketentuan Check-in</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bandara" class="sidebar-item" data-section="bandara">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>Informasi Bandara</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#penumpang-baru" class="sidebar-item" data-section="penumpang-baru">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <span>Panduan Penumpang Baru</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pembatalan" class="sidebar-item" data-section="pembatalan">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6"/><path d="M9 9l6 6"/></svg>
+                            <span>Kebijakan Pembatalan dan Refund</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="sidebar-toggle" id="sidebarToggle">←</button>
+            </aside>
+            <div class="content-wrapper" id="contentWrapper">
+                <main class="content-area">
+                    <section id="bagasi" class="content active">
+                        <div class="title-section" style="background-image: url('https://www.gardaoto.com/wp-content/uploads/2023/12/begini-proses-barang-anda-masuk-bagasi-pesawat-tYD94s0XBt.jpg');">
+                            <div class="title-overlay">
+                              <h1>Panduan Kebijakan Bagasi</h1>
+                            </div>
+                        </div>
+                        <h2>1. Bagasi Kabin</h2>
+                        <p>Bagasi kabin adalah barang bawaan yang dapat dibawa ke dalam kabin pesawat.</p>
+                        <p><b>Ketentuan Bagasi Kabin:</b></p>
+                        <ul>
+                            <li>Berat Maksimal: 7 kg per penumpang (dewasa atau anak-anak).</li>
+                            <li>Dimensi Maksimal:</li>
+                                <ul>
+                                    <li>Panjang: 56 cm</li>
+                                    <li>Lebar: 36 cm</li>
+                                    <li>Tinggi: 23 cm</li>
+                                </ul>
+                            <li>Barang bawaan harus dapat disimpan di kompartemen di atas kepala atau di bawah kursi di depan Anda.</li>
+                        </ul>
+                        <p><b>Barang yang Diizinkan di Kabin:</b></p>
+                        <ul>
+                            <li>Tas laptop, kamera, atau tas tangan kecil (tidak dihitung sebagai bagasi utama).</li>
+                            <li>Barang-barang penting seperti dokumen perjalanan, obat-obatan, atau perhiasan.</li>
+                        </ul>
+                        <p><b>Larangan Bagasi Kabin:</b></p>
+                        <ul>
+                            <li>Barang tajam seperti gunting atau pisau.</li>
+                            <li>Cairan, aerosol, atau gel lebih dari 100 ml (harus dimasukkan ke dalam wadah transparan).</li>
+                            <li>Bahan berbahaya seperti bahan peledak, gas bertekanan, atau baterai litium tertentu.</li>
+                        </ul>
+                        <h2>2. Bagasi Terdaftar</h2>
+                        <p>Bagasi terdaftar adalah bagasi yang akan dimasukkan ke dalam ruang kargo pesawat.</p>
+                        <p><b>Ketentuan Bagasi Terdaftar:</b></p>
+                        <ul>
+                            <li>Berat Maksimal Gratis (Allowance):</li>
+                                <ul>
+                                    <li>Kelas Ekonomi: 20 kg per penumpang.</li>
+                                    <li>Kelas Bisnis: 30 kg per penumpang.</li>
+                                    <li>Kelas Utama: 40 kg per penumpang.</li>
+                                </ul>
+                            <li>Dimensi Maksimal: Total panjang + lebar + tinggi tidak boleh melebihi 158 cm.</li>
+                        </ul>
+                        <p><b>Kelebihan Bagasi (Excess Baggage):</b></p>
+                        <ul>
+                            <li>Kelebihan berat akan dikenakan biaya tambahan sesuai dengan tarif per kilogram. Biaya ini bervariasi tergantung pada rute penerbangan.</li>
+                        </ul>
+                        <p><b>Bagasi Khusus:</b></p>
+                        <ul>
+                            <li>Peralatan olahraga: Seperti sepeda, papan selancar, atau peralatan golf harus didaftarkan sebagai bagasi khusus.</li>
+                            <li>Instrumen musik: Dapat dibawa sebagai bagasi terdaftar atau dibawa ke kabin jika memenuhi ukuran tertentu.</li>
+                        </ul>
+                        <h2>3. Barang yang Dilarang dalam Bagasi Terdaftar</h2>
+                        <ul>
+                            <li>Barang mudah terbakar (bensin, alkohol, atau kembang api).</li>
+                            <li>Bahan kimia berbahaya (asam, pestisida, atau gas).</li>
+                            <li>Barang berharga seperti uang tunai, perhiasan, atau dokumen penting (disarankan untuk dibawa dalam bagasi kabin).</li>
+                        </ul>
+                        <h2>4. Tips Mengemas Bagasi Anda</h2>
+                        <ul>
+                            <li>Gunakan Koper Berkualitas: Pastikan koper memiliki kunci yang aman dan tahan banting.</li>
+                            <li>Labeli Bagasi Anda: Tambahkan tag nama, alamat, dan nomor telepon untuk memudahkan identifikasi jika hilang.</li>
+                            <li>Pisahkan Barang Penting: Simpan barang berharga di bagasi kabin.</li>
+                            <li>Patuhi Batas Berat: Gunakan timbangan bagasi untuk memastikan bagasi Anda tidak melebihi batas.</li>
+                        </ul>
+                        <h2>5. Informasi Tambahan</h2>
+                        <ul>
+                            <li>Bagasi terdaftar harus dilaporkan ke loket check-in minimal 2 jam sebelum keberangkatan untuk penerbangan domestik dan 3 jam sebelum keberangkatan untuk penerbangan internasional.</li>
+                            <li>Bagasi yang rusak atau hilang harus segera dilaporkan ke petugas layanan bagasi di bandara.</li>
+                        </ul>
+                        <p>Catatan Penting: Kebijakan bagasi dapat berubah sewaktu-waktu sesuai dengan peraturan maskapai dan otoritas penerbangan. Harap periksa kembali ketentuan saat Anda memesan tiket.</p>
+                    </section>
+                    <section id="checkin" class="content">
+                        <div class="title-section" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjghJzi0n67rbVzaFHu1mCAM0TvtqkUqiKuS1nNB72DQfM0eSLVlTtvd46qcKyhcP3bIZkgKWBX_KS8NSxfEAaHusHaD0YN7KQ92uhZb56KUHjKmdfZTHxqk91jcARxhTItk7WzGIw9G74TDh1T9g2SjCq_Ov3NQNdSrUNM4nGdUakmaSU9V6Ox/w1200-h675-p-k-no-nu/travel-5219496_1280.jpg');">
+                            <div class="title-overlay">
+                              <h1>Ketentuan Check-in</h1>
+                            </div>
+                        </div>
+                        <h2>1. Opsi Check-in yang Tersedia</h2>
+                        <ol type="a">
+                            <li>Check-in di Bandara:</li>
+                                <li>Loket Check-in:</li>
+                                    <ul>
+                                        <li>Loket check-in tersedia di bandara untuk melayani semua penumpang.</li>
+                                        <li>Pastikan tiba lebih awal untuk menghindari antrean, yaitu:</li>
+                                            <ul>
+                                                <li>Penerbangan Domestik: Minimal 2 jam sebelum keberangkatan.</li>
+                                                <li>Penerbangan Internasional: Minimal 3 jam sebelum keberangkatan.</li>
+                                            </ul>
+                                        <li>Loket check-in akan ditutup 45 menit sebelum keberangkatan untuk penerbangan domestik dan 1 jam sebelum keberangkatan untuk penerbangan internasional.</li>
+                                    </ul>
+                                <li>Kios Self Check-in:</li>
+                                    <ul>
+                                        <li>Penumpang dapat menggunakan mesin kios check-in yang tersedia di bandara.</li>
+                                        <li>Masukkan nomor tiket atau kode pemesanan untuk mencetak boarding pass Anda.</li>
+                                        <li>Tidak berlaku untuk penumpang dengan permintaan layanan khusus seperti bayi, kursi roda, atau hewan peliharaan.</li>
+                                    </ul>
+                            <li>Online Check-in:</li>
+                                <ul>
+                                    <li>Waktu Check-in:</li>
+                                        <ul>
+                                                <li>Online check-in dibuka 48 jam sebelum keberangkatan dan ditutup 4 jam sebelum keberangkatan.</li>
+                                        </ul>
+                                    <li>Langkah-langkah Check-in Online:</li>
+                                        <ol>
+                                            <li>Kunjungi situs web resmi maskapai atau aplikasi seluler.</li>
+                                            <li>Masukkan kode pemesanan atau nomor tiket.</li>
+                                            <li>Pilih kursi Anda (jika tersedia).</li>
+                                            <li>Konfirmasi check-in dan unduh boarding pass.
+                                            </li>
+                                        </ol>
+                                    <li>Keuntungan:</li>
+                                        <ul>
+                                            <li>Hemat waktu, tanpa perlu antre di loket bandara.</li>
+                                            <li>Langsung menuju konter drop-off bagasi jika memiliki bagasi terdaftar.</li>
+                                        </ul>
+                                </ul>
+                            <li>Mobile Check-in:</li>
+                                <ul>
+                                    <li>Mobile check-in dapat dilakukan melalui aplikasi seluler maskapai.</li>
+                                    <li>E-boarding pass akan dikirimkan langsung ke perangkat Anda dan dapat digunakan di pos pemeriksaan keamanan dan gerbang keberangkatan.</li>
+                                </ul>
+                        </ol>
+                        <h2>2. Dokumen yang Diperlukan untuk Check-in</h2>
+                        <p>Pastikan Anda membawa dokumen berikut saat proses check-in:</p>
+                        <ul>
+                            <li>Tiket Pesawat: Tiket elektronik atau cetak.</li>
+                            <li>Identitas Diri:</li>
+                            <ul>
+                                <li>KTP, SIM, atau Paspor (untuk penerbangan domestik).</li>
+                                <li>Paspor dan visa (jika diperlukan) untuk penerbangan internasional.</li>
+                            </ul>
+                            <li>Dokumen Tambahan:</li>
+                            <ul>
+                                <li>Surat keterangan kesehatan (jika diperlukan).</li>
+                                <li>Dokumen perjalanan bayi atau anak-anak.</li>
+                            </ul>
+                        </ul>
+                        <h2>3. Penumpang dengan Kebutuhan Khusus</h2>
+                        <p>Kami menyediakan layanan khusus untuk penumpang dengan kebutuhan berikut:</p>
+                        <ul>
+                            <li>Ibu Hamil:</li>
+                            <ul>
+                                <li>Penumpang hamil diwajibkan membawa surat keterangan medis jika usia kehamilan lebih dari 28 minggu.</li>
+                                <li>Check-in di loket khusus untuk kenyamanan lebih.</li>
+                            </ul>
+                            <li>Penumpang dengan Disabilitas:</li>
+                            <ul>
+                                <li>Kursi roda atau layanan bantuan tersedia di bandara.</li>
+                                <li>Harap informasikan kebutuhan Anda saat memesan tiket.</li>
+                            </ul>
+                            <li>Penumpang dengan Anak atau Bayi:</li>
+                            <ul>
+                                <li>Pintu boarding prioritas tersedia untuk keluarga dengan anak kecil.</li>
+                                <li>Harap membawa dokumen identitas anak atau akta kelahiran.
+                                </li>
+                            </ul>
+                        </ul>
+                        <h2>4. Ketentuan Check-in Tambahan</h2>
+                        <ul>
+                            <li>Late Check-in:</li>
+                            <p>Penumpang yang tiba di loket setelah waktu check-in ditutup dianggap tidak hadir dan tiket tidak dapat dikembalikan.</p>
+                            <li>Bagasi:</li>
+                            <p>Penumpang dengan bagasi terdaftar harus melapor ke loket drop-off setelah check-in online atau mobile.</p>
+                            <li>Penumpang Internasional:</li>
+                            <ul>
+                                <li>Harap tiba lebih awal untuk menyelesaikan proses imigrasi dan pemeriksaan dokumen.</li>
+                                <li>Pastikan semua dokumen perjalanan Anda valid sebelum keberangkatan.</li>
+                            </ul>
+                        </ul>
+                        <h2>5. Tips untuk Proses Check-in yang Lancar</h2>
+                        <ol>
+                            <li>Datang Lebih Awal: Selalu perhatikan waktu yang dibutuhkan untuk perjalanan ke bandara dan proses check-in.</li>
+                            <li>Gunakan Online Check-in: Jika memungkinkan, manfaatkan layanan check-in online untuk menghemat waktu.</li>
+                            <li>Periksa Dokumen Anda: Pastikan dokumen Anda lengkap dan sesuai dengan syarat penerbangan.</li>
+                            <li>Pantau Jadwal Penerbangan: Periksa informasi terbaru mengenai jadwal keberangkatan melalui situs web atau aplikasi maskapai.</li>
+                        </ol>
+                        <h2>6. Informasi Penting</h2>
+                        <ul>
+                            <li>Penumpang yang tidak dapat check-in tepat waktu tidak diperbolehkan naik ke pesawat dan dianggap "no-show."</li>
+                            <li>Kebijakan ini berlaku untuk semua penerbangan domestik maupun internasional.</li>
+                            <li>Jika Anda memerlukan bantuan lebih lanjut terkait proses check-in, silakan hubungi layanan pelanggan maskapai kami.</li>
+                        </ul>
+                    </section>
+                    <section id="bandara" class="content">
+                        <div class="title-section" style="background-image: url('https://img.okezone.com/content/2023/04/05/406/2793360/dapat-gate-28-di-terminal-3-bandara-soetta-naik-bus-aja-biar-nggak-gempor-OVrAqF9EwO.JPG');">
+                            <div class="title-overlay">
+                              <h1>Informasi Bandara</h1>
+                            </div>
+                        </div>
+                        <h2>1. Lokasi dan Terminal</h2>
+                        <ul>
+                            <li>Pastikan Anda mengetahui lokasi terminal keberangkatan dan kedatangan sesuai tiket Anda.</li>
+                            <li>Informasi terminal dapat dilihat di tiket atau melalui aplikasi maskapai kami.</li>
+                        </ul>
+                        <h2>2. Waktu Kedatangan di Bandara</h2>
+                        <ul>
+                            <li>Penerbangan Domestik: Tiba minimal 2 jam sebelum keberangkatan.</li>                                
+                            <li>Penerbangan Internasional: Tiba minimal 3 jam sebelum keberangkatan.</li>
+                        </ul>
+                        <h2>3. Fasilitas Bandara</h2>
+                        <ul>
+                            <li>Area Check-in: Lokasi untuk melapor dan menyerahkan bagasi.</li>
+                            <li>Ruang Tunggu: Tempat nyaman untuk menunggu sebelum boarding.</li>
+                            <li>Fasilitas Tambahan: ATM, lounge, toko bebas bea, restoran, dan pusat informasi.</li>
+                        </ul>
+                        <h2>4. Keamanan dan Pemeriksaan</h2>
+                        <ul>
+                            <li>Periksa barang bawaan Anda untuk mematuhi aturan bandara, seperti larangan membawa cairan lebih dari 100 ml (untuk penerbangan internasional).</li>
+                            <li>Siapkan dokumen perjalanan untuk pemeriksaan di pos keamanan dan imigrasi.</li>
+                        </ul>
+                        <h2>5. Informasi Kontak Bandara</h2>
+                        <ul>
+                            <li>Hubungi pusat informasi bandara untuk pertanyaan terkait fasilitas atau layanan tambahan.</li>
+                            <li>Informasi kontak bandara tersedia di situs web resmi maskapai atau bandara setempat.</li>
+                        </ul>
+                    </section>
+                    <section id="penumpang-baru" class="content">
+                        <div class="title-section" style="background-image: url('https://media.suara.com/pictures/653x366/2019/05/16/77065-ilustrasi-penumpang-pesawat-pixabaystocksnap.jpg');">
+                            <div class="title-overlay">
+                              <h1>Panduan Penumpang Baru</h1>
+                            </div>
+                        </div>
+                        <p>Bagi Anda yang baru pertama kali terbang bersama Anna Voyage, berikut adalah beberapa hal yang perlu diperhatikan:</p>
+                        <h2>1. Sebelum Keberangkatan</h2>
+                        <ul>
+                            <li>Pesan Tiket: Gunakan situs web atau aplikasi resmi maskapai untuk memesan tiket.</li>
+                            <li>Dokumen Perjalanan: Siapkan KTP untuk penerbangan domestik atau paspor dan visa (jika diperlukan) untuk penerbangan internasional.</li>
+                            <li>Pengepakan Barang: Pastikan barang bawaan mematuhi aturan kebijakan bagasi.
+                            </li>
+                        </ul>
+                        <h2>2. Di Bandara</h2>
+                        <ul>
+                            <li>Datang Lebih Awal: Tiba minimal 2 jam sebelum penerbangan domestik dan 3 jam untuk internasional.</li>                               
+                            <li>Proses Check-in: Lakukan check-in di konter atau secara online, dan serahkan bagasi jika diperlukan.</li>
+                            <li>Keamanan dan Boarding: Ikuti pemeriksaan keamanan dan pastikan berada di gate boarding tepat waktu.</li>
+                        </ul>
+                        <h2>3. Selama Penerbangan</h2>
+                        <ul>
+                            <li>Ikuti instruksi dari awak kabin.</li>
+                            <li>Kenakan sabuk pengaman selama tanda "kenakan sabuk pengaman" menyala.</li>
+                            <li>Nikmati fasilitas penerbangan yang disediakan.</li>
+                        </ul>
+                    </section>
+                    <section id="pembatalan" class="content">
+                        <div class="title-section" style="background-image: url('https://img.okezone.com/content/2024/02/19/406/2972468/batal-terbang-karena-sakit-perhatikan-7-hal-ini-jika-ingin-refund-tiket-epo65jF5nM.JPG');">
+                            <div class="title-overlay">
+                              <h1>Kebijakan Pembatalan dan Refund</h1>
+                            </div>
+                        </div>
+                        <h2>1. Pembatalan Tiket</h2>
+                        <ul>
+                            <li>Pembatalan tiket dapat dilakukan melalui situs web resmi, aplikasi maskapai, atau menghubungi layanan pelanggan.</li>
+                            <li>Permintaan pembatalan harus diajukan minimal 4 jam sebelum jadwal keberangkatan.</li>
+                            <li>Tiket dengan tarif promo atau diskon tertentu mungkin tidak dapat dibatalkan.</li>
+                        </ul>
+                        <h2>2. Proses Refund</h2>
+                        <ul>
+                            <li>Refund Dana:</li>
+                            <ul>
+                                <li>Pengembalian dana akan dikenakan biaya pembatalan sesuai kebijakan maskapai.</li>
+                                <li>Waktu proses refund bervariasi antara 7–14 hari kerja, tergantung metode pembayaran.
+                                </li>
+                            </ul>                                
+                            <li>Refund dalam Bentuk Kredit:</li>
+                            <ul>
+                                <li>Anda dapat memilih pengembalian dalam bentuk kredit perjalanan (travel credit) yang dapat digunakan untuk pemesanan berikutnya.</li>
+                            </ul>
+                        </ul>
+                        <h2>3. Ketentuan Tambahan</h2>
+                        <ul>
+                            <li>Tiket yang sudah digunakan sebagian tidak dapat direfund.</li>
+                            <li>Biaya layanan dan pajak tertentu mungkin tidak dapat dikembalikan.
+                            </li>
+                        </ul>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+    <!--INPOO INPOOOOOO-->
+
+
+    <!--FOOOTERRRRRR-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="logo.png" alt="Logo Maskapai" class="footer-logo">
+                <p>Maskapai terbaik yang siap melayani perjalanan Anda ke berbagai destinasi menarik di seluruh dunia.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Tentang Kami</h4>
+                <ul>
+                    <li><a href="#informasi-perusahaan">Informasi Perusahaan</a></li>
+                    <li><a href="#layanan-utama">Layanan Utama</a></li>
+                    <li><a href="#jaringan-penerbangan">Jaringan Penerbangan</a></li>
+                    <li><a href="#armada-pesawat">Armada Pesawat</a></li>
+                    <li><a href="#penghargaan">Penghargaan dan Sertifikasi</a></li>
+                    <li><a href="#tim-manajemen">Tim Manajemen</a></li>
+                    <li><a href="#kemitraan">Hubungan dan Kemitraan</a></li>
+                    <li><a href="#berita">Berita</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontak Kami</h4>
+                <p><strong>Telepon:</strong> +62 123 456 789</p>
+                <p><strong>Email:</strong> contact@annavoyage.com</p>
+                <p><strong>Alamat:</strong> Jl. Jend. Gatot Subroto, Beningrejo, Gaum, Kec. Tasikmadu, Kabupaten Karanganyar, Jawa Tengah 57716</p>
+            </div>
+            <div class="footer-social">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="https://www.svgrepo.com/show/473600/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn.worldvectorlogo.com/logos/twitter-logo-2.svg" alt="Twitter"></a>
+                    <a href="#"><img src="https://www.svgrepo.com/show/510026/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="https://www.svgrepo.com/show/473806/tiktok.svg" alt="Tiktok"></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Berlangganan Newsletter</h4>
+                <p>Dapatkan informasi promo dan penawaran terbaik langsung di email Anda!</p>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Masukkan email Anda" required>
+                    <button type="submit">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Anna Voyage. All Rights Reserved.</p>
+        </div>
+    </footer>    
+    <script src="info.js"></script>
+</body>
+</html>
